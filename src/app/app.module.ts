@@ -9,7 +9,7 @@ import { BattleBoxComponent } from './battle-box/battle-box.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
-  declarations: [ AppComponent, GameBarComponent ],
+  declarations: [ AppComponent, GameBarComponent, BattleBoxComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
