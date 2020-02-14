@@ -7,7 +7,8 @@ export class StatsService {
 
   constructor() { }
 
-  public getStatsFor(who: string) {
+  public getStatsFor(who: string): Stats {
+    console.log(`Loading Basic Stats for ${who}, ${JSON.stringify(BASIC_STATS)}`);
     return BASIC_STATS;
   }
 }
