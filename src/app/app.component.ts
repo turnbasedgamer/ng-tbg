@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LogService} from './log/log.service';
 
 @Component({
   selector: 'my-app',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular';
+
+  constructor(private log: LogService) {
+    
+  }
+
+  ngOnInit() {
+    this.log.enableDebug();
+    this.log.test();
+  }
 }

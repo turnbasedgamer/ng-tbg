@@ -17,10 +17,8 @@ export class StatsComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(`Who's this for ${this.who}`);
     this.stats = this.statsServe.getStatsFor(this.who);
-    console.log(`Stats: ${this.stats.getStats()}`);
-    this.log.info(`Loading Stats for '${this.who}': ${JSON.stringify(this.stats, null, 4)}`);
+    //this.log.debug(`Loading Stats for '${this.who}': ${JSON.stringify(this.stats, null, 4)}`);
   }
 
 }

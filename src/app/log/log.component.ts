@@ -7,15 +7,13 @@ import { LogService } from './log.service';
 	styleUrls: ['./log.component.css']
 })
 export class LogComponent implements OnDestroy {
-	log: string;
+	log: string = "";
 	sub: any;
 
 	constructor(private logService: LogService) {
-		this.log = 'Opened Log';
 		this.sub = logService.subscribe((s) => {
-			this.log += '\n' + s;
+			this.log += s + '\n';
 		});
-		this.logService.info('Testing component');
 	}
 
 	ngOnDestroy() {
