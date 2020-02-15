@@ -7,7 +7,7 @@ import { Option } from './option';
   styleUrls: ['./option.component.css']
 })
 export class OptionComponent implements OnInit {
-  @Input option: Option;
+  @Input() option: Option;
 
   constructor() { }
 
