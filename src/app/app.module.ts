@@ -12,10 +12,12 @@ import { StatComponent } from './battle-box/stats/stat/stat.component';
 
 import { LogComponent } from './log/log.component';
 import { LogService } from './log/log.service';
+import { OptionsComponent } from './battle-box/options/options.component';
+import { OptionComponent } from './battle-box/options/option/option.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
-  declarations: [ AppComponent, GameBarComponent, BattleBoxComponent, StatsComponent, StatComponent, LogComponent ],
+  declarations: [ AppComponent, GameBarComponent, BattleBoxComponent, StatsComponent, StatComponent, LogComponent, OptionsComponent, OptionComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ LogService, StatsService ]
 })
