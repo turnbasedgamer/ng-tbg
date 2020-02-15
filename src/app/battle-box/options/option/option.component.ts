@@ -14,4 +14,8 @@ export class OptionComponent implements OnInit {
   ngOnInit() {
   }
 
+  actionOption() {
+    
+  }
+
 }

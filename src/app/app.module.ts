@@ -14,11 +14,12 @@ import { LogComponent } from './log/log.component';
 import { LogService } from './log/log.service';
 import { OptionsComponent } from './battle-box/options/options.component';
 import { OptionComponent } from './battle-box/options/option/option.component';
+import { OptionsService } from './battle-box/options/options.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
   declarations: [ AppComponent, GameBarComponent, BattleBoxComponent, StatsComponent, StatComponent, LogComponent, OptionsComponent, OptionComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [ LogService, StatsService ]
+  providers: [ LogService, StatsService, OptionsService ]
 })
 export class AppModule { }
