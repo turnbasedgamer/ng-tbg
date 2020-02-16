@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LogService } from './../../log/log.service';
 import { Options } from './Options';
 import { OptionsService } from './options.service';
 
@@ -9,10 +10,14 @@ import { OptionsService } from './options.service';
 })
 export class OptionsComponent implements OnInit {
   public options: Options;
-  constructor(private optionsServ: OptionsService) { }
+  constructor(private optionsServ: OptionsService, private log: LogService) { }
 
   ngOnInit() {
     this.options = this.optionsServ.getOptions();
+  }
+
+  optionAction(action: IAction) {
+    this.log.debug(`Action: ${JSON.stringify(action)}`);
   }
 
 }
