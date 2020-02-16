@@ -8,7 +8,7 @@ import { LogService } from './../../log/log.service';
   templateUrl: './stats.component.html',
   styleUrls: ['./stats.component.css']
 })
-export class StatsComponent implements OnInit {
+export class StatsComponent implements OnInit { 
   @Input() who: string;
   public stats: Stats;
 
