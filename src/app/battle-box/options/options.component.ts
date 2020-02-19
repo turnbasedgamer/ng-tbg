@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { LogService } from './../../log/log.service';
 import { Options } from './Options';
 import { OptionsService } from './options.service';
+import { LogService } from '../../../common/log/log.service';
 
 @Component({
   selector: 'app-options',
@@ -16,7 +16,7 @@ export class OptionsComponent implements OnInit {
     this.options = this.optionsServ.getOptions();
   }
 
-  optionAction(action: IAction) {
+  optionAction(action: any) {
     this.log.debug(`Action: ${JSON.stringify(action)}`);
   }
 

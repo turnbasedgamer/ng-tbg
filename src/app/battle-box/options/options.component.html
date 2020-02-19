@@ -1,3 +1,6 @@
 <div *ngIf="options">
-  <app-option *ngFor="let o of options.getOptions()" [option]="o"></app-option>
+  <app-option *ngFor="let o of options.getOptions()" 
+              [option]="o"
+              (action)="optionAction($event)"
+              ></app-option>
 </div>

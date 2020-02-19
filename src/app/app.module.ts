@@ -10,8 +10,8 @@ import { StatsComponent } from './battle-box/stats/stats.component';
 import { StatsService } from './battle-box/stats/stats.service';
 import { StatComponent } from './battle-box/stats/stat/stat.component';
 
-import { LogComponent } from './log/log.component';
-import { LogService } from './log/log.service';
+import { LogComponent } from '../common/log/log.component';
+import { LogService } from '../common/log/log.service';
 import { OptionsComponent } from './battle-box/options/options.component';
 import { OptionComponent } from './battle-box/options/option/option.component';
 import { OptionsService } from './battle-box/options/options.service';

@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { IAction } from '../../../common/logic/IAction';
 import { Option } from './option';
 
 @Component({
@@ -9,13 +10,15 @@ import { Option } from './option';
 export class OptionComponent implements OnInit {
   @Input() option: Option;
 
+  @Output() action: EventEmitter<IAction> = new EventEmitter<IAction>();
+
   constructor() { }
 
   ngOnInit() {
   }
 
   actionOption() {
-    
+    this.action.emit(this.option.action);
   }
 
 }
