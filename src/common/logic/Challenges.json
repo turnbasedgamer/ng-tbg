@@ -1,0 +1,30 @@
+{
+  "ChallengeRatings": [
+    {
+      "name": "Everyday",
+      "cardinal": 1,
+      "rating": 10
+    },
+    {
+      "name": "Challenging",
+      "cardinal": 2,
+      "rating": 15
+    },
+    {
+      "name": "Heroic",
+      "cardinal": 3,
+      "rating": 20
+    },
+    {
+      "name": "Epic",
+      "cardinal": 4,
+      "rating": 25
+    },
+    {
+      "name": "Legendary",
+      "cardinal": 5,
+      "rating": 30
+    }
+  ],
+  "LevelledChallengeModifier": 2
+}
