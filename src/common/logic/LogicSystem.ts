@@ -1,25 +1,15 @@
-import functions from './Functions.json';
+import { Functions } from './Functions';
 
-export class LogicSystem {
-  public call(functionName: string, args: any[]) {
+export module LogicSystem {
+  export function call(functionName: string, args: any[]) {
     let f: any = this.resolve(functionName);
     f(...args);
   }
 
-  public resolve(name: string): any  {
-    return this.functions.find((f) => f.name === name).func;
+  function resolve(name: string): any  {
+    return Functions.getFunction(name);
   }
 
-  private functions: Array<Function> = [
-    
-  ];
-}
-
-export class Functions {
   
 }
 
-class Function {
-  public name: string;
-  public func: any;
-}
