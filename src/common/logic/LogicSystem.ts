@@ -9,7 +9,4 @@ export module LogicSystem {
   function resolve(name: string): any  {
     return Functions.getFunction(name);
   }
-
-  
 }
-

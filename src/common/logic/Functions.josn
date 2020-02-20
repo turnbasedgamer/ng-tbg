@@ -1,6 +1,0 @@
-{
-      name: "TestFunction",
-      func: function(arg1: any, arg2: any) {
-        console.log(`Resolving function Test, with args ${arg1}, ${arg2}`);
-      }
-}
