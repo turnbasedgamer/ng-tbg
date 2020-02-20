@@ -12,7 +12,7 @@ export class IOption {
 };
 
 export class Prerequisits {
-  
+
 }
 
 export class SkillPool {
@@ -24,25 +24,19 @@ export class Screen {
 }
 
 export class Function {
-  private jasonrpc: JSONRPC;
-  private func: any;
+  private func: FuncWrapper;
 
   constructor(rpc: string) {
-    this.jasonrpc = JSON.parse(rpc);
+    this.func = JSON.parse(rpc);
   }
 
   public call() {
-    if(!this.func) {
-      this.func = LogicSystem.loadFunction(this.jasonrpc.method);
-    }
-    this.func(...this.jasonrpc.params);
+    LogicSystem.call(this.func.method, this.func.params)
   }
 }
 
 
-export class JSONRPC {
-  public jsonrpc: string;
+export class FuncWrapper {
   public method: string;
   public params: any[];
-  public id: number;
 }
